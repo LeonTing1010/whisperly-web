@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://whisperly.com
+
+# Sitemaps
+Sitemap: https://whisperly.com/sitemap.xml
