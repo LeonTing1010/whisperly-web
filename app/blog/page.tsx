@@ -43,30 +43,33 @@ export default function BlogPage() {
         keywords="Whisperly blog, audio transcription tips, speech-to-text tutorials, privacy insights"
         url="https://whisperly.com/blog"
       />
-      <section className="max-w-3xl mx-auto py-16 px-4">
-        <h1 className="text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100">Whisperly Blog</h1>
-        <p className="mb-8 text-lg text-gray-700 dark:text-gray-300">
-          Tips, tutorials, and industry insights on audio transcription, privacy, and AI speech-to-text.
-        </p>
-        <ul className="space-y-8">
-          {posts.map((post, idx) => (
-            <li key={idx} className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-              {post.published ? (
-                <Link href={post.url} className="text-2xl font-semibold text-blue-600 hover:underline dark:text-blue-400">
-                  {post.title}
-                </Link>
-              ) : (
-                <div className="text-2xl font-semibold text-gray-500 dark:text-gray-400 cursor-not-allowed">
-                  {post.title}
-                  <span className="ml-2 text-sm bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 px-2 py-1 rounded">
-                    Coming Soon
-                  </span>
-                </div>
-              )}
-              <p className="text-gray-700 dark:text-gray-300 mt-2">{post.excerpt}</p>
-            </li>
-          ))}
-        </ul>
+      <section className="relative min-h-screen py-20 bg-gradient-to-br from-blue-100 via-purple-100 to-white dark:from-gray-900 dark:via-blue-900 dark:to-gray-800 overflow-hidden">
+        <div className="absolute -top-32 -left-32 w-[480px] h-[480px] bg-gradient-to-br from-blue-300 via-purple-300 to-transparent rounded-full blur-3xl opacity-40 pointer-events-none" />
+        <div className="max-w-3xl mx-auto px-4 relative z-10">
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-8 text-gray-900 dark:text-white text-center tracking-tight">Whisperly Blog</h1>
+          <p className="mb-12 text-lg text-gray-700 dark:text-gray-300 text-center">
+            Tips, tutorials, and industry insights on audio transcription, privacy, and AI speech-to-text.
+          </p>
+          <ul className="space-y-8">
+            {posts.map((post, idx) => (
+              <li key={idx} className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 border border-blue-100 dark:border-blue-900 group transition-transform hover:scale-[1.025] hover:shadow-2xl animate-fade-in">
+                {post.published ? (
+                  <Link href={post.url} className="text-2xl font-bold text-blue-600 dark:text-blue-400 group-hover:underline">
+                    {post.title}
+                  </Link>
+                ) : (
+                  <div className="text-2xl font-bold text-gray-500 dark:text-gray-400 cursor-not-allowed">
+                    {post.title}
+                    <span className="ml-2 text-sm bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 px-2 py-1 rounded">
+                      Coming Soon
+                    </span>
+                  </div>
+                )}
+                <p className="text-gray-700 dark:text-gray-300 mt-2 text-base">{post.excerpt}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
     </>
   );

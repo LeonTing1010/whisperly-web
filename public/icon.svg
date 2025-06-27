@@ -1,0 +1,66 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 优化背景渐变：增加色标使过渡更柔和 -->
+    <linearGradient id="bg" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f8d7ff" stop-opacity="0.9"/>
+      <stop offset="0.3" stop-color="#c885ff"/>
+      <stop offset="0.7" stop-color="#90c7ff"/>
+      <stop offset="1" stop-color="#6dd5fa" stop-opacity="0.9"/>
+    </linearGradient>
+    
+    <!-- 波形渐变增强：添加透明度变化和微妙色彩 -->
+    <linearGradient id="wave" x1="0" y1="256" x2="512" y2="256" gradientUnits="userSpaceOnUse">
+      <stop stop-color="rgba(255,255,255,0.9)"/>
+      <stop offset="0.5" stop-color="rgba(255,255,255,0.7)"/>
+      <stop offset="1" stop-color="rgba(255,255,255,0.5)"/>
+    </linearGradient>
+    
+    <!-- 添加发光效果滤镜 -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- 文字阴影效果 -->
+    <filter id="textShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#232946" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- 圆角背景：添加轻微阴影提升立体感 -->
+  <rect x="32" y="32" width="448" height="448" rx="100" fill="url(#bg)" filter="url(#glow)"/>
+  
+  <!-- 声波基底：优化椭圆比例和透明度 -->
+  <ellipse cx="256" cy="256" rx="120" ry="120" fill="url(#wave)" opacity="0.75"/>
+  
+  <!-- 音频波形：优化形状和层次 -->
+  <rect x="170" y="180" width="20" height="152" rx="10" fill="#fff" opacity="0.9">
+    <animate attributeName="height" values="152;180;152" dur="1.5s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="210" y="160" width="24" height="192" rx="12" fill="#fff" opacity="0.95">
+    <animate attributeName="height" values="192;220;192" dur="1.2s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="258" y="180" width="20" height="152" rx="10" fill="#fff" opacity="0.9">
+    <animate attributeName="height" values="152;180;152" dur="1.5s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="292" y="200" width="16" height="112" rx="8" fill="#fff" opacity="0.8">
+    <animate attributeName="height" values="112;140;112" dur="1.8s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- 半月形：优化路径并添加内阴影 -->
+  <path d="M370 256a114 114 0 1 1-114-114A90 90 0 0 0 370 256Z" fill="rgba(255,255,255,0.6)">
+    <animateTransform attributeName="transform" type="rotate" values="0;5;0" dur="3s" repeatCount="indefinite" transform-origin="256 256"/>
+  </path>
+  
+  <!-- Whisperly 文字：优化排版并添加阴影 -->
+  <text x="50%" y="62%" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="68" font-weight="800" fill="#232946" opacity="0.98" letter-spacing="3" filter="url(#textShadow)">Whisperly</text>
+  
+  <!-- 装饰性光点：增强科技感 -->
+  <circle cx="120" cy="100" r="3" fill="rgba(255,255,255,0.7)"/>
+  <circle cx="400" cy="80" r="2" fill="rgba(255,255,255,0.5)"/>
+  <circle cx="100" cy="420" r="2.5" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="420" cy="400" r="3" fill="rgba(255,255,255,0.7)"/>
+</svg>

@@ -10,10 +10,13 @@ export default function TestimonialsPage() {
         keywords="Whisperly testimonials, user reviews, audio transcription success stories"
         url="https://whisperly.com/testimonials"
       />
-      <section className="max-w-4xl mx-auto py-16 px-4">
-        <h1 className="text-4xl font-bold mb-6 text-gray-900 ">What Our Users Say</h1>
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-          <Testimonials />
+      <section className="relative min-h-screen py-20 bg-gradient-to-br from-blue-100 via-purple-100 to-white dark:from-gray-900 dark:via-blue-900 dark:to-gray-800 overflow-hidden">
+        <div className="absolute -top-32 -left-32 w-[480px] h-[480px] bg-gradient-to-br from-blue-300 via-purple-300 to-transparent rounded-full blur-3xl opacity-40 pointer-events-none" />
+        <div className="max-w-4xl mx-auto px-4 relative z-10">
+          <h1 className="text-4xl font-extrabold mb-8 text-gray-900 dark:text-white text-center">What Our Users Say</h1>
+          <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl p-10 border border-blue-100 dark:border-blue-900 animate-fade-in">
+            <Testimonials />
+          </div>
         </div>
       </section>
     </>
