@@ -1,0 +1,6 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="180" height="180" rx="34" fill="#2563eb"/>
+  <path d="M45 67.5h90v11.25H45V67.5zm0 22.5h67.5v11.25H45V90zm0 22.5h78.75v11.25H45V112.5z" fill="white"/>
+  <circle cx="135" cy="45" r="22.5" fill="#fbbf24"/>
+  <text x="90" y="150" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="22" font-weight="bold">W</text>
+</svg> 

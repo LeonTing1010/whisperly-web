@@ -25,7 +25,7 @@ export default function DownloadPage() {
           <p className="mb-4 text-gray-700 dark:text-white">Unlock unlimited transcription, advanced export formats, and priority support.</p>
           <CTAButton text="Buy Pro Version" href="/pricing" className="w-full sm:w-auto" />
         </div>
-        <div className="text-gray-600 text-sm">
+        <div className="text-gray-600 text-sm ">
           Need help installing? See our <a href="/faq" className="text-blue-600 underline">FAQ</a> or contact <a href="mailto:support@whisperly.com" className="text-blue-600 underline">support@whisperly.com</a>.
         </div>
       </section>

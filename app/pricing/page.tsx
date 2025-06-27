@@ -27,7 +27,6 @@ export default function PricingPage() {
             <li>No subscription, no hidden fees</li>
             <li>Free updates forever</li>
             <li>Priority email support</li>
-            <li>30-day money-back guarantee</li>
           </ul>
           <CTAButton text="Buy Pro Now" href="/pricing" className="mt-4" />
         </div>
@@ -58,10 +57,6 @@ export default function PricingPage() {
               <div className="text-sm text-gray-500">${subscriptionPrice}/month</div>
             </div>
           </div>
-        </div>
-        <div className="bg-white dark:bg-gray-900 rounded-lg shadow p-8 mb-8 dark:text-white">
-          <h2 className="text-xl font-semibold mb-2">Refund Policy</h2>
-          <p className="mb-2">Try Whisperly risk-free. If you're not satisfied, contact us within 30 days for a full refund—no questions asked.</p>
         </div>
         <div className="bg-white dark:bg-gray-900 rounded-lg shadow p-8 dark:text-white">
           <h2 className="text-xl font-semibold mb-2">Need Help?</h2>
