@@ -1,5 +1,5 @@
-import SEO from "../../../components/SEO/SEO";
 import Link from "next/link";
+import SEO from "../../../components/SEO/SEO";
 
 export default function OfflineAudioToolsPage() {
   return (
@@ -8,7 +8,7 @@ export default function OfflineAudioToolsPage() {
         title="Best Offline Audio-to-Text Tools in 2024 - Complete Comparison"
         description="Compare the top offline speech-to-text software including Whisperly, TurboScribe, and more. Find the best local audio transcription tool for your needs."
         keywords="offline audio transcription, local speech-to-text, audio to text software, privacy-focused transcription, best transcription tools 2024"
-        url="https://whisperly.com/blog/best-offline-audio-to-text-tools-2024"
+        url="https://whisperly.space/blog/best-offline-audio-to-text-tools-2024"
       />
       
       <article className="max-w-4xl mx-auto py-16 px-4">

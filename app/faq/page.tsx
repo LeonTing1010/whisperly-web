@@ -8,7 +8,7 @@ export default function FAQPage() {
         title="FAQ | Whisperly - Audio Transcription Frequently Asked Questions"
         description="Find answers to common questions about Whisperly's local audio transcription, privacy, supported languages, installation, troubleshooting, and more."
         keywords="audio transcription FAQ, Whisperly help, installation guide, troubleshooting, privacy questions, supported formats"
-        url="https://whisperly.com/faq"
+        url="https://whisperly.space/faq"
       />
       <section className="relative min-h-screen py-20 bg-gradient-to-br from-blue-100 via-purple-100 to-white dark:from-gray-900 dark:via-blue-900 dark:to-gray-800 overflow-hidden">
         <div className="absolute -top-32 -left-32 w-[480px] h-[480px] bg-gradient-to-br from-blue-300 via-purple-300 to-transparent rounded-full blur-3xl opacity-40 pointer-events-none" />

@@ -1,7 +1,8 @@
 'use client'
+import * as Dialog from "@radix-ui/react-dialog";
 import { useState } from "react";
 import { Button } from "../../components/Button/Button";
-import * as Dialog from "@radix-ui/react-dialog";
+import SEO from "../../components/SEO/SEO";
 
 export default function PricingPage() {
   const [months, setMonths] = useState(12);
@@ -12,7 +13,6 @@ export default function PricingPage() {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
   const subscriptionPrice = 10; // $10/month for competitors
-  const whisperlyPrice = 39; // $39 one-time
   const competitorTotal = months * subscriptionPrice;
 
   async function handleSubmit(e: React.FormEvent) {
@@ -46,7 +46,14 @@ export default function PricingPage() {
   }
 
   return (
-    <section className="relative min-h-screen py-20 bg-gradient-to-br from-blue-100 via-purple-100 to-white dark:from-gray-900 dark:via-blue-900 dark:to-gray-800 overflow-hidden">
+    <>
+      <SEO
+        title="Pricing | Whisperly - One-Time Payment vs Subscription"
+        description="Compare Whisperly's one-time payment of $39 with competitors' monthly subscriptions. Save money with lifetime access to local audio transcription."
+        keywords="Whisperly pricing, one-time payment audio transcription, subscription alternative"
+        url="https://whisperly.space/pricing"
+      />
+      <section className="relative min-h-screen py-20 bg-gradient-to-br from-blue-100 via-purple-100 to-white dark:from-gray-900 dark:via-blue-900 dark:to-gray-800 overflow-hidden">
       <div className="absolute -top-32 -left-32 w-[480px] h-[480px] bg-gradient-to-br from-blue-300 via-purple-300 to-transparent rounded-full blur-3xl opacity-40 pointer-events-none" />
       <div className="max-w-3xl mx-auto px-4 relative z-10">
         <h1 className="text-4xl md:text-5xl font-extrabold mb-10 text-gray-900 dark:text-white text-center tracking-tight">Simple, Transparent Pricing</h1>
@@ -144,9 +151,10 @@ export default function PricingPage() {
         {/* 联系方式区块 */}
         <div className="bg-white dark:bg-gray-900 rounded-2xl shadow p-8 dark:text-white border border-blue-100 dark:border-blue-900 animate-fade-in">
           <h2 className="text-xl font-bold mb-2">Need Help?</h2>
-          <p>Email us at <a href="mailto:support@whisperly.com" className="text-blue-600 underline">support@whisperly.com</a> for any questions about pricing, payment, or refunds.</p>
+          <p>Email us at <a href="mailto:support@whisperly.space" className="text-blue-600 underline">support@whisperly.space</a> for any questions about pricing, payment, or refunds.</p>
         </div>
       </div>
     </section>
+    </>
   );
 } 

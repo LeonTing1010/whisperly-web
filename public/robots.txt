@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://whisperly.com
+Host: https://whisperly.space
 
 # Sitemaps
-Sitemap: https://whisperly.com/sitemap.xml
+Sitemap: https://whisperly.space/sitemap.xml

@@ -8,7 +8,7 @@ export default function TestimonialsPage() {
         title="Testimonials | Whisperly - User Reviews and Success Stories"
         description="Read real user reviews and success stories from podcasters, trainers, and creators who use Whisperly for local audio transcription."
         keywords="Whisperly testimonials, user reviews, audio transcription success stories"
-        url="https://whisperly.com/testimonials"
+        url="https://whisperly.space/testimonials"
       />
       <section className="relative min-h-screen py-20 bg-gradient-to-br from-blue-100 via-purple-100 to-white dark:from-gray-900 dark:via-blue-900 dark:to-gray-800 overflow-hidden">
         <div className="absolute -top-32 -left-32 w-[480px] h-[480px] bg-gradient-to-br from-blue-300 via-purple-300 to-transparent rounded-full blur-3xl opacity-40 pointer-events-none" />

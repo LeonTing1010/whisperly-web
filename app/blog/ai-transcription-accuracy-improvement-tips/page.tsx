@@ -1,5 +1,5 @@
-import SEO from "../../../components/SEO/SEO";
 import Link from "next/link";
+import SEO from "../../../components/SEO/SEO";
 
 export default function AITranscriptionAccuracyPage() {
   return (
@@ -8,7 +8,7 @@ export default function AITranscriptionAccuracyPage() {
         title="AI Transcription Accuracy Improvement Tips - Expert Guide 2024"
         description="Learn proven techniques to improve AI transcription accuracy with Whisperly. From audio quality optimization to post-processing tips."
         keywords="AI transcription accuracy, speech-to-text improvement, audio quality tips, transcription optimization, Whisperly accuracy, audio preprocessing"
-        url="https://whisperly.com/blog/ai-transcription-accuracy-improvement-tips"
+        url="https://whisperly.space/blog/ai-transcription-accuracy-improvement-tips"
       />
       
       <article className="max-w-4xl mx-auto py-16 px-4">

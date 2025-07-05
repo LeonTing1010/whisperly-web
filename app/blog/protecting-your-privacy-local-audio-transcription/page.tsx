@@ -1,5 +1,5 @@
-import SEO from "../../../components/SEO/SEO";
 import Link from "next/link";
+import SEO from "../../../components/SEO/SEO";
 
 export default function PrivacyLocalTranscriptionPage() {
   return (
@@ -8,7 +8,7 @@ export default function PrivacyLocalTranscriptionPage() {
         title="Protecting Your Privacy with Local Audio Transcription - Complete Guide"
         description="Learn why local processing is the best way to keep your audio data secure. Discover the privacy risks of cloud transcription and how Whisperly protects your data."
         keywords="audio transcription privacy, local speech-to-text security, cloud transcription risks, data protection, GDPR compliance, audio data security"
-        url="https://whisperly.com/blog/protecting-your-privacy-local-audio-transcription"
+        url="https://whisperly.space/blog/protecting-your-privacy-local-audio-transcription"
       />
       
       <article className="max-w-4xl mx-auto py-16 px-4">

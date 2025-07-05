@@ -12,14 +12,14 @@ export async function POST(req: NextRequest) {
 
     const resend = new Resend(env.RESEND_API_KEY);
     await resend.emails.send({
-      from: "Whisperly <noreply@whisperly.com>",
+      from: "Whisperly <noreply@whisperly.space>",
       to: env.BUY_PRO_RECIPIENT_EMAIL,
       subject: "New Whisperly Pro Purchase Request",
       html: `<p><b>Email:</b> ${email}</p><p><b>Survey:</b> ${survey}</p>`,
     });
 
     return new Response(JSON.stringify({ success: true }), { status: 200 });
-  } catch (error) {
+  } catch {
     return new Response(JSON.stringify({ error: "Failed to send email." }), { status: 500 });
   }
 } 

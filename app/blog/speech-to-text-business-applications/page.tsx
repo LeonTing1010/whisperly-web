@@ -1,5 +1,5 @@
-import SEO from "../../../components/SEO/SEO";
 import Link from "next/link";
+import SEO from "../../../components/SEO/SEO";
 
 export default function BusinessApplicationsPage() {
   return (
@@ -8,7 +8,7 @@ export default function BusinessApplicationsPage() {
         title="Speech-to-Text Business Applications - Transform Your Workflow in 2024"
         description="Discover how speech-to-text technology is revolutionizing business operations. Learn about real-world applications and ROI benefits for your organization."
         keywords="speech-to-text business applications, voice transcription ROI, business automation, meeting transcription, customer service AI, workflow optimization"
-        url="https://whisperly.com/blog/speech-to-text-business-applications"
+        url="https://whisperly.space/blog/speech-to-text-business-applications"
       />
       
       <article className="max-w-4xl mx-auto py-16 px-4">

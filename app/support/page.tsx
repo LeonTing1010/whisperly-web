@@ -1,5 +1,14 @@
+import SEO from "../../components/SEO/SEO";
+
 export default function SupportPage() {
   return (
+    <>
+      <SEO
+        title="Support | Whisperly - Get Help with Audio Transcription"
+        description="Get support for Whisperly audio transcription software. FAQ, contact information, and troubleshooting help."
+        keywords="Whisperly support, audio transcription help, contact support"
+        url="https://whisperly.space/support"
+      />
     <section className="relative min-h-screen py-20 bg-gradient-to-br from-blue-100 via-purple-100 to-white dark:from-gray-900 dark:via-blue-900 dark:to-gray-800 overflow-hidden">
       <div className="absolute -top-32 -left-32 w-[480px] h-[480px] bg-gradient-to-br from-blue-300 via-purple-300 to-transparent rounded-full blur-3xl opacity-40 pointer-events-none" />
       <div className="max-w-2xl mx-auto px-4 relative z-10">
@@ -10,5 +19,6 @@ export default function SupportPage() {
         </div>
       </div>
     </section>
+    </>
   );
 } 

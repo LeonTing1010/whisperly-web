@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: 'https://whisperly.com',
+  siteUrl: 'https://whisperly.space',
   generateRobotsTxt: true,
 }; 

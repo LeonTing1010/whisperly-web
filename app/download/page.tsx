@@ -8,7 +8,7 @@ export default function DownloadPage() {
         title="Download | Whisperly - Get the App"
         description="Download Whisperly for Windows, macOS, or Linux. Start transcribing audio locally with privacy and high accuracy."
         keywords="Whisperly download, audio transcription app, offline speech-to-text"
-        url="https://whisperly.com/download"
+        url="https://whisperly.space/download"
       />
       <section className="relative min-h-screen py-20 bg-gradient-to-br from-blue-100 via-purple-100 to-white dark:from-gray-900 dark:via-blue-900 dark:to-gray-800 overflow-hidden">
         <div className="absolute -top-32 -left-32 w-[480px] h-[480px] bg-gradient-to-br from-blue-300 via-purple-300 to-transparent rounded-full blur-3xl opacity-40 pointer-events-none" />
@@ -118,7 +118,7 @@ export default function DownloadPage() {
             </div>
           </div>
           <div className="text-gray-600 text-sm text-center ">
-            Need help installing? See our <a href="/faq" className="text-blue-600 underline">FAQ</a> or contact <a href="mailto:support@whisperly.com" className="text-blue-600 underline">support@whisperly.com</a>.
+            Need help installing? See our <a href="/faq" className="text-blue-600 underline">FAQ</a> or contact <a href="mailto:support@whisperly.space" className="text-blue-600 underline">support@whisperly.space</a>.
           </div>
         </div>
       </section>

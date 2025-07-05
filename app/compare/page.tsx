@@ -71,7 +71,7 @@ export default function ComparePage() {
         title="Whisperly vs Competitors | Audio Transcription Tool Comparison"
         description="See how Whisperly compares to TurboScribe, Adobe Podcast, and ElevenLabs. Local processing, privacy, one-time payment, and more."
         keywords="audio transcription comparison, Whisperly vs TurboScribe, local vs cloud transcription, AI speech-to-text tools"
-        url="https://whisperly.com/compare"
+        url="https://whisperly.space/compare"
       />
       <section className="relative min-h-screen py-20 bg-gradient-to-br from-blue-100 via-purple-100 to-white dark:from-gray-900 dark:via-blue-900 dark:to-gray-800 overflow-hidden">
         <div className="absolute -top-32 -left-32 w-[480px] h-[480px] bg-gradient-to-br from-blue-300 via-purple-300 to-transparent rounded-full blur-3xl opacity-40 pointer-events-none" />
@@ -101,7 +101,7 @@ export default function ComparePage() {
               </div>
             </div>
             {/* 竞品卡片 */}
-            {competitors.map((c, idx) => (
+            {competitors.map((c, _idx) => (
               <div key={c.name} className="flex-1 bg-white dark:bg-gray-900 rounded-2xl shadow p-8 border border-gray-200 dark:border-gray-800 opacity-80 flex flex-col hover:scale-[1.01] hover:shadow-xl transition-transform duration-200 animate-fade-in relative">
                 <div className="absolute top-4 right-4 bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-gray-200 text-xs px-3 py-1 rounded-full font-bold shadow z-10 whitespace-nowrap">{c.note}</div>
                 <h2 className="text-xl font-bold mb-4 text-gray-700 dark:text-gray-200 text-center">{c.name}</h2>

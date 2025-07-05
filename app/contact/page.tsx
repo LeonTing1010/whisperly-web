@@ -1,5 +1,5 @@
-import SEO from "../../components/SEO/SEO";
 import Link from "next/link";
+import SEO from "../../components/SEO/SEO";
 
 export default function ContactPage() {
   return (
@@ -8,7 +8,7 @@ export default function ContactPage() {
         title="Contact & Support | Whisperly - Get Help with Audio Transcription"
         description="Contact Whisperly for technical support, installation help, troubleshooting, or general inquiries. We're here to help with your audio transcription needs."
         keywords="Whisperly contact, technical support, audio transcription help, troubleshooting, installation support"
-        url="https://whisperly.com/contact"
+        url="https://whisperly.space/contact"
       />
       <section className="relative min-h-screen py-20 bg-gradient-to-br from-blue-100 via-purple-100 to-white dark:from-gray-900 dark:via-blue-900 dark:to-gray-800 overflow-hidden">
         <div className="absolute -top-32 -left-32 w-[480px] h-[480px] bg-gradient-to-br from-blue-300 via-purple-300 to-transparent rounded-full blur-3xl opacity-40 pointer-events-none" />
@@ -136,8 +136,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 dark:text-white">Email Support</h3>
-                      <a href="mailto:support@whisperly.com" className="text-blue-600 dark:text-blue-400 hover:underline">
-                        support@whisperly.com
+                      <a href="mailto:support@whisperly.space" className="text-blue-600 dark:text-blue-400 hover:underline">
+                        support@whisperly.space
                       </a>
                       <p className="text-sm text-gray-600 dark:text-gray-400">Response within 24 hours</p>
                     </div>
@@ -148,8 +148,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 dark:text-white">Website</h3>
-                      <a href="https://whisperly.com" className="text-blue-600 dark:text-blue-400 hover:underline">
-                        whisperly.com
+                      <a href="https://whisperly.space" className="text-blue-600 dark:text-blue-400 hover:underline">
+                        whisperly.space
                       </a>
                       <p className="text-sm text-gray-600 dark:text-gray-400">Download and documentation</p>
                     </div>

@@ -1,8 +1,8 @@
-import SEO from "../components/SEO/SEO";
-import ComparisonTable from "../components/Compare/ComparisonTable";
-import Testimonials from "../components/Testimonials/Testimonials";
-import FAQList from "../components/FAQ/FAQList";
+import Image from "next/image";
 import CTAButton from "../components/Button/CTAButton";
+import FAQList from "../components/FAQ/FAQList";
+import SEO from "../components/SEO/SEO";
+import Testimonials from "../components/Testimonials/Testimonials";
 
 export default function HomePage() {
   return (
@@ -11,7 +11,7 @@ export default function HomePage() {
         title="Whisperly | Local Audio Transcription, Privacy-First, One-Time Payment"
         description="Whisperly is the leading local audio-to-text software. Multi-language, privacy protected, no subscription, free trial forever."
         keywords="local audio transcription, AI speech-to-text, privacy audio transcription, one-time payment, offline audio to text"
-        url="https://whisperly.com/"
+        url="https://whisperly.space/"
         image="/images/og-image.png"
         schema={{
           "@context": "https://schema.org",
@@ -33,7 +33,7 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
             {/* Brand Icon */}
             <div className="flex justify-center mb-8">
-              <img src="/icon.svg" alt="Whisperly Logo" className="w-28 h-28 drop-shadow-xl animate-fade-in" />
+              <Image src="/icon.svg" alt="Whisperly Logo" width={112} height={112} className="drop-shadow-xl animate-fade-in" />
             </div>
             <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-gray-900 dark:text-white leading-tight tracking-tight animate-fade-in">
               <span className="bg-gradient-to-r from-blue-600 via-purple-500 to-blue-400 bg-clip-text text-transparent">Local. Private. Yours.</span>

@@ -1,5 +1,6 @@
-import { FaExternalLinkAlt } from "react-icons/fa";
+import Image from "next/image";
 import Link from "next/link";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -57,7 +58,7 @@ export default function Footer() {
                   className="inline-flex items-center gap-1 underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   aria-label="Visit TurboScribe - AI transcription service"
                 >
-                  <img src="/assets/turboscribe-logo.svg" alt="TurboScribe Logo" className="w-4 h-4 inline" />
+                  <Image src="/assets/turboscribe-logo.svg" alt="TurboScribe Logo" width={16} height={16} className="inline" />
                   TurboScribe
                   <FaExternalLinkAlt className="ml-1 w-3 h-3" aria-hidden="true" />
                 </a>
@@ -70,7 +71,7 @@ export default function Footer() {
                   className="inline-flex items-center gap-1 underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   aria-label="Visit Adobe Podcast - Audio enhancement tool"
                 >
-                  <img src="/assets/adobe-logo.svg" alt="Adobe Podcast Logo" className="w-4 h-4 inline" />
+                  <Image src="/assets/adobe-logo.svg" alt="Adobe Podcast Logo" width={16} height={16} className="inline" />
                   Adobe Podcast
                   <FaExternalLinkAlt className="ml-1 w-3 h-3" aria-hidden="true" />
                 </a>
@@ -83,7 +84,7 @@ export default function Footer() {
                   className="inline-flex items-center gap-1 underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   aria-label="Visit ElevenLabs - AI voice synthesis platform"
                 >
-                  <img src="/assets/elevenlabs-logo.svg" alt="ElevenLabs Logo" className="w-4 h-4 inline" />
+                  <Image src="/assets/elevenlabs-logo.svg" alt="ElevenLabs Logo" width={16} height={16} className="inline" />
                   ElevenLabs
                   <FaExternalLinkAlt className="ml-1 w-3 h-3" aria-hidden="true" />
                 </a>
@@ -96,7 +97,7 @@ export default function Footer() {
                   className="inline-flex items-center gap-1 underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   aria-label="Visit Otter.ai - AI meeting transcription"
                 >
-                  <img src="/assets/otter-logo.ico" alt="Otter.ai Logo" className="w-4 h-4 inline" />
+                  <Image src="/assets/otter-logo.ico" alt="Otter.ai Logo" width={16} height={16} className="inline" />
                   Otter.ai
                   <FaExternalLinkAlt className="ml-1 w-3 h-3" aria-hidden="true" />
                 </a>
@@ -109,7 +110,7 @@ export default function Footer() {
                   className="inline-flex items-center gap-1 underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   aria-label="Visit Rev - Professional transcription service"
                 >
-                  <img src="/assets/rev-logo.ico" alt="Rev Logo" className="w-4 h-4 inline" />
+                  <Image src="/assets/rev-logo.ico" alt="Rev Logo" width={16} height={16} className="inline" />
                   Rev
                   <FaExternalLinkAlt className="ml-1 w-3 h-3" aria-hidden="true" />
                 </a>
@@ -123,7 +124,7 @@ export default function Footer() {
                   className="inline-flex items-center gap-1 underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   aria-label="Visit Audacity - Free audio editor"
                 >
-                  <img src="/assets/audacity-logo.svg" alt="Audacity Logo" className="w-4 h-4 inline" />
+                  <Image src="/assets/audacity-logo.svg" alt="Audacity Logo" width={16} height={16} className="inline" />
                   Audacity
                   <FaExternalLinkAlt className="ml-1 w-3 h-3" aria-hidden="true" />
                 </a>
@@ -136,7 +137,7 @@ export default function Footer() {
                   className="inline-flex items-center gap-1 underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   aria-label="Visit Adobe Audition - Professional audio editing"
                 >
-                  <img src="/assets/adobe-audition-logo.svg" alt="Adobe Audition Logo" className="w-4 h-4 inline" />
+                  <Image src="/assets/adobe-audition-logo.svg" alt="Adobe Audition Logo" width={16} height={16} className="inline" />
                   Adobe Audition
                   <FaExternalLinkAlt className="ml-1 w-3 h-3" aria-hidden="true" />
                 </a>
@@ -150,7 +151,7 @@ export default function Footer() {
                   className="inline-flex items-center gap-1 underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   aria-label="Visit Tor Project - Privacy protection"
                 >
-                  <img src="/assets/tor-logo.svg" alt="Tor Project Logo" className="w-4 h-4 inline" />
+                  <Image src="/assets/tor-logo.svg" alt="Tor Project Logo" width={16} height={16} className="inline" />
                   Tor Project
                   <FaExternalLinkAlt className="ml-1 w-3 h-3" aria-hidden="true" />
                 </a>
@@ -163,7 +164,7 @@ export default function Footer() {
                   className="inline-flex items-center gap-1 underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   aria-label="Visit ProtonMail - Secure email service"
                 >
-                  <img src="/assets/protonmail-logo.ico" alt="ProtonMail Logo" className="w-4 h-4 inline" />
+                  <Image src="/assets/protonmail-logo.ico" alt="ProtonMail Logo" width={16} height={16} className="inline" />
                   ProtonMail
                   <FaExternalLinkAlt className="ml-1 w-3 h-3" aria-hidden="true" />
                 </a>
@@ -177,7 +178,7 @@ export default function Footer() {
                   className="inline-flex items-center gap-1 underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   aria-label="Visit OpenAI - AI research and development"
                 >
-                  <img src="/assets/openai-logo.svg" alt="OpenAI Logo" className="w-4 h-4 inline" />
+                  <Image src="/assets/openai-logo.svg" alt="OpenAI Logo" width={16} height={16} className="inline" />
                   OpenAI
                   <FaExternalLinkAlt className="ml-1 w-3 h-3" aria-hidden="true" />
                 </a>
@@ -190,7 +191,7 @@ export default function Footer() {
                   className="inline-flex items-center gap-1 underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   aria-label="Visit Hugging Face - AI model hub"
                 >
-                  <img src="/assets/huggingface-logo.svg" alt="Hugging Face Logo" className="w-4 h-4 inline" />
+                  <Image src="/assets/huggingface-logo.svg" alt="Hugging Face Logo" width={16} height={16} className="inline" />
                   Hugging Face
                   <FaExternalLinkAlt className="ml-1 w-3 h-3" aria-hidden="true" />
                 </a>

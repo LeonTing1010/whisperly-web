@@ -1,3 +1,4 @@
+import Script from "next/script";
 import "../styles/tailwind.css";
 import Footer from "../components/Layout/Footer";
 import NavBar from "../components/Layout/NavBar";
@@ -11,7 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           title="Whisperly | Local Audio Transcription, Privacy-First, One-Time Payment"
           description="Whisperly is the leading local audio-to-text software. Multi-language, privacy protected, no subscription, free trial forever."
           keywords="local audio transcription, AI speech-to-text, privacy audio transcription, one-time payment, offline audio to text"
-          url="https://whisperly.com/"
+          url="https://whisperly.space/"
           image="/images/og-image.png"
         />
         
@@ -31,6 +32,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
       </head>
       <body>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-JX5427S8Z6"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-JX5427S8Z6');
+          `}
+        </Script>
+        
         <NavBar />
         {children}
         <Footer />

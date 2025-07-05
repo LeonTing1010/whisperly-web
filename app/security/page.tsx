@@ -7,7 +7,7 @@ export default function SecurityPolicy() {
         title="Security Policy | Whisperly"
         description="Learn how Whisperly keeps your audio and data secure with local processing and privacy-first design."
         keywords="Whisperly security, audio data security, local processing security"
-        url="https://whisperly.com/security"
+        url="https://whisperly.space/security"
       />
       <main>
         <section className="relative min-h-screen py-20 bg-gradient-to-br from-blue-100 via-purple-100 to-white dark:from-gray-900 dark:via-blue-900 dark:to-gray-800 overflow-hidden">
@@ -30,11 +30,11 @@ export default function SecurityPolicy() {
               </ul>
               <h2 className="text-2xl font-bold mt-8 mb-2 text-gray-900 dark:text-white">Vulnerability Reporting</h2>
               <p className="mb-4 text-gray-700 dark:text-gray-300">
-                If you discover a security vulnerability, please report it to <a href="mailto:support@whisperly.com" className="text-blue-600 underline">support@whisperly.com</a>. We take all reports seriously and will respond promptly.
+                If you discover a security vulnerability, please report it to <a href="mailto:support@whisperly.space" className="text-blue-600 underline">support@whisperly.space</a>. We take all reports seriously and will respond promptly.
               </p>
               <h2 className="text-2xl font-bold mt-8 mb-2 text-gray-900 dark:text-white">Contact</h2>
               <p className="mb-2 text-gray-700 dark:text-gray-300">
-                For any security-related questions, contact us at <a href="mailto:support@whisperly.com" className="text-blue-600 underline">support@whisperly.com</a>.
+                For any security-related questions, contact us at <a href="mailto:support@whisperly.space" className="text-blue-600 underline">support@whisperly.space</a>.
               </p>
               <p className="text-sm text-gray-500 mt-8 text-center">Last updated: {new Date().toLocaleDateString()}</p>
             </div>

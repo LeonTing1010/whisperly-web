@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from "../../components/SEO/SEO";
 
 const sections = [
   {
@@ -161,6 +162,13 @@ const sections = [
 
 export default function GuidePage() {
   return (
+    <>
+      <SEO
+        title="User Guide | Whisperly - How to Use Audio Transcription"
+        description="Complete guide on how to use Whisperly for audio transcription. Learn about features, troubleshooting, and best practices."
+        keywords="Whisperly guide, audio transcription tutorial, how to use Whisperly"
+        url="https://whisperly.space/guide"
+      />
     <div className="max-w-3xl mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">Whisperly User Guide</h1>
       <nav className="mb-8">
@@ -181,5 +189,6 @@ export default function GuidePage() {
         </section>
       ))}
     </div>
+    </>
   );
 } 

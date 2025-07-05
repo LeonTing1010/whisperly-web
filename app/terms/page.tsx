@@ -7,7 +7,7 @@ export default function TermsOfService() {
         title="Terms of Service | Whisperly"
         description="Read the terms and conditions for using Whisperly's local audio transcription software."
         keywords="Whisperly terms of service, audio transcription terms, software license"
-        url="https://whisperly.com/terms"
+        url="https://whisperly.space/terms"
       />
       <main>
         <section className="relative min-h-screen py-20 bg-gradient-to-br from-blue-100 via-purple-100 to-white dark:from-gray-900 dark:via-blue-900 dark:to-gray-800 overflow-hidden">
@@ -40,7 +40,7 @@ export default function TermsOfService() {
               </p>
               <h2 className="text-2xl font-bold mt-8 mb-2 text-gray-900 dark:text-white">Contact</h2>
               <p className="mb-2 text-gray-700 dark:text-gray-300">
-                For questions about these terms, contact us at <a href="mailto:support@whisperly.com" className="text-blue-600 underline">support@whisperly.com</a>.
+                For questions about these terms, contact us at <a href="mailto:support@whisperly.space" className="text-blue-600 underline">support@whisperly.space</a>.
               </p>
               <p className="text-sm text-gray-500 mt-8 text-center">Last updated: {new Date().toLocaleDateString()}</p>
             </div>

@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
         title="Privacy Policy | Whisperly"
         description="Learn how Whisperly protects your privacy. All audio processing is local, and your data never leaves your device."
         keywords="Whisperly privacy policy, audio privacy, local transcription privacy"
-        url="https://whisperly.com/privacy"
+        url="https://whisperly.space/privacy"
       />
       <main>
         <section className="relative min-h-screen py-20 bg-gradient-to-br from-blue-100 via-purple-100 to-white dark:from-gray-900 dark:via-blue-900 dark:to-gray-800 overflow-hidden">
@@ -32,12 +32,12 @@ export default function PrivacyPolicy() {
               </ul>
               <h2 className="text-2xl font-bold mt-8 mb-2 text-gray-900 dark:text-white">Your Rights</h2>
               <ul className="list-disc ml-6 mb-4 text-gray-700 dark:text-gray-300">
-                <li>You can request deletion of your support data at any time by contacting us at <a href="mailto:support@whisperly.com" className="text-blue-600 underline">support@whisperly.com</a>.</li>
+                <li>You can request deletion of your support data at any time by contacting us at <a href="mailto:support@whisperly.space" className="text-blue-600 underline">support@whisperly.space</a>.</li>
                 <li>You have the right to know what data we hold about you and how it is used.</li>
               </ul>
               <h2 className="text-2xl font-bold mt-8 mb-2 text-gray-900 dark:text-white">Contact</h2>
               <p className="mb-2 text-gray-700 dark:text-gray-300">
-                If you have any questions about this Privacy Policy, please contact us at <a href="mailto:support@whisperly.com" className="text-blue-600 underline">support@whisperly.com</a>.
+                If you have any questions about this Privacy Policy, please contact us at <a href="mailto:support@whisperly.space" className="text-blue-600 underline">support@whisperly.space</a>.
               </p>
               <p className="text-sm text-gray-500 mt-8 text-center">Last updated: {new Date().toLocaleDateString()}</p>
             </div>

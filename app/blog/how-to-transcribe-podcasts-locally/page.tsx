@@ -1,5 +1,5 @@
-import SEO from "../../../components/SEO/SEO";
 import Link from "next/link";
+import SEO from "../../../components/SEO/SEO";
 
 export default function PodcastTranscriptionPage() {
   return (
@@ -8,7 +8,7 @@ export default function PodcastTranscriptionPage() {
         title="How to Transcribe Podcasts Locally with Whisperly - Complete Guide 2024"
         description="Learn how to transcribe podcasts locally with Whisperly for maximum privacy and speed. Step-by-step guide for offline audio-to-text conversion."
         keywords="local podcast transcription, offline audio transcription, Whisperly tutorial, private speech-to-text, podcast to text, audio transcription software"
-        url="https://whisperly.com/blog/how-to-transcribe-podcasts-locally"
+        url="https://whisperly.space/blog/how-to-transcribe-podcasts-locally"
       />
       
       <article className="max-w-4xl mx-auto py-16 px-4">
