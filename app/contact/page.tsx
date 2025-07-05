@@ -1,7 +1,62 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 import SEO from "../../components/SEO/SEO";
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    operatingSystem: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          operatingSystem: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <>
       <SEO
@@ -24,11 +79,24 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div>
               <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Send us a Message</h2>
-              <form className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl p-10 space-y-6 border border-blue-100 dark:border-blue-900 animate-fade-in">
+              <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl p-10 space-y-6 border border-blue-100 dark:border-blue-900 animate-fade-in">
+                {submitStatus === 'success' && (
+                  <div className="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 p-4 rounded-lg">
+                    ✅ Message sent successfully! We'll get back to you within 24 hours.
+                  </div>
+                )}
+                {submitStatus === 'error' && (
+                  <div className="bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 p-4 rounded-lg">
+                    ❌ Failed to send message. Please try again or contact us directly at support@whisperly.space.
+                  </div>
+                )}
                 <div>
                   <label className="block mb-2 font-semibold text-gray-900 dark:text-white">Name *</label>
                   <input 
                     type="text" 
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
                     className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white placeholder-gray-400 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
                     placeholder="Your name" 
                     required
@@ -38,6 +106,9 @@ export default function ContactPage() {
                   <label className="block mb-2 font-semibold text-gray-900 dark:text-white">Email *</label>
                   <input 
                     type="email" 
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white placeholder-gray-400 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
                     placeholder="you@email.com" 
                     required
@@ -45,7 +116,13 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <label className="block mb-2 font-semibold text-gray-900 dark:text-white">Subject *</label>
-                  <select className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                  <select 
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    required
+                  >
                     <option value="">Select a topic</option>
                     <option value="installation">Installation & Setup</option>
                     <option value="technical">Technical Support</option>
@@ -58,7 +135,12 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <label className="block mb-2 font-semibold text-gray-900 dark:text-white">Operating System</label>
-                  <select className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                  <select 
+                    name="operatingSystem"
+                    value={formData.operatingSystem}
+                    onChange={handleInputChange}
+                    className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  >
                     <option value="">Select your OS</option>
                     <option value="windows">Windows 10/11</option>
                     <option value="macos">macOS</option>
@@ -68,6 +150,9 @@ export default function ContactPage() {
                 <div>
                   <label className="block mb-2 font-semibold text-gray-900 dark:text-white">Message *</label>
                   <textarea 
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
                     className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white placeholder-gray-400 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
                     rows={6} 
                     placeholder="Please describe your issue or question in detail. Include any error messages, system specifications, or steps to reproduce the problem."
@@ -76,9 +161,10 @@ export default function ContactPage() {
                 </div>
                 <button 
                   type="submit" 
-                  className="w-full bg-gradient-to-r from-blue-500 via-purple-500 to-blue-400 text-white px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition-transform font-semibold"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-blue-500 via-purple-500 to-blue-400 text-white px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition-transform font-semibold disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </div>
