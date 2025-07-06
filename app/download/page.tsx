@@ -1,14 +1,33 @@
+
+"use client";
 import { useEffect, useState } from "react";
 import CTAButton from "../../components/Button/CTAButton";
 import SEO from "../../components/SEO/SEO";
 
+type Downloads = {
+  version: string;
+  windows: {
+    exe: string;
+    setup: string;
+  };
+  macos: {
+    intel: string;
+    arm: string;
+  };
+  linux: {
+    deb: string;
+    rpm: string;
+    appimage: string;
+  };
+};
+
 export default function DownloadPage() {
-  const [downloads, setDownloads] = useState<any>(null);
+  const [downloads, setDownloads] = useState<Downloads | null>(null);
 
   useEffect(() => {
     fetch("/api/downloads")
       .then((res) => res.json())
-      .then(setDownloads);
+      .then((data) => setDownloads(data as Downloads));
   }, []);
 
   return (
