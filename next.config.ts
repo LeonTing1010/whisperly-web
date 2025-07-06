@@ -10,6 +10,15 @@ const config: NextConfig = {
       fullUrl: true,
     },
   },
+  env: {
+    NEXT_PUBLIC_WIN_EXE_URL: process.env.NEXT_PUBLIC_WIN_EXE_URL,
+    NEXT_PUBLIC_WIN_SETUP_URL: process.env.NEXT_PUBLIC_WIN_SETUP_URL,
+    NEXT_PUBLIC_MAC_INTEL_URL: process.env.NEXT_PUBLIC_MAC_INTEL_URL,
+    NEXT_PUBLIC_MAC_ARM_URL: process.env.NEXT_PUBLIC_MAC_ARM_URL,
+    NEXT_PUBLIC_LINUX_DEB_URL: process.env.NEXT_PUBLIC_LINUX_DEB_URL,
+    NEXT_PUBLIC_LINUX_RPM_URL: process.env.NEXT_PUBLIC_LINUX_RPM_URL,
+    NEXT_PUBLIC_LINUX_APPIMAGE_URL: process.env.NEXT_PUBLIC_LINUX_APPIMAGE_URL,
+  },
   rewrites: async () => [
     { source: "/healthz", destination: "/api/health" },
     { source: "/api/healthz", destination: "/api/health" },

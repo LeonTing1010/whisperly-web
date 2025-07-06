@@ -1,7 +1,16 @@
+import { useEffect, useState } from "react";
 import CTAButton from "../../components/Button/CTAButton";
 import SEO from "../../components/SEO/SEO";
 
 export default function DownloadPage() {
+  const [downloads, setDownloads] = useState<any>(null);
+
+  useEffect(() => {
+    fetch("/api/downloads")
+      .then((res) => res.json())
+      .then(setDownloads);
+  }, []);
+
   return (
     <>
       <SEO
@@ -27,15 +36,15 @@ export default function DownloadPage() {
                 Windows
               </h3>
               <div className="flex flex-col sm:flex-row gap-3">
-                <CTAButton 
-                  text="Download .exe (17.7 MB)" 
-                  href="https://github.com/LeonTing1010/whisperly-web/releases/download/v1.1.0/Whisperly.exe" 
-                  className="flex-1 text-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition-colors duration-200 border-0" 
+                <CTAButton
+                  text="Download .exe (17.7 MB)"
+                  href={downloads?.windows?.exe || "#"}
+                  className="flex-1 text-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition-colors duration-200 border-0"
                 />
-                <CTAButton 
-                  text="Setup Installer (3.7 MB)" 
-                  href="https://github.com/LeonTing1010/whisperly-web/releases/download/v1.1.0/Whisperly_0.1.0_x64-setup.exe" 
-                  className="flex-1 text-center px-6 py-3 bg-gray-600 text-white font-semibold rounded-lg shadow hover:bg-gray-700 transition-colors duration-200 border-0" 
+                <CTAButton
+                  text="Setup Installer (3.7 MB)"
+                  href={downloads?.windows?.setup || "#"}
+                  className="flex-1 text-center px-6 py-3 bg-gray-600 text-white font-semibold rounded-lg shadow hover:bg-gray-700 transition-colors duration-200 border-0"
                 />
               </div>
             </div>
@@ -49,15 +58,15 @@ export default function DownloadPage() {
                 macOS
               </h3>
               <div className="flex flex-col sm:flex-row gap-3">
-                <CTAButton 
-                  text="Intel Mac (6.0 MB)" 
-                  href="https://github.com/LeonTing1010/whisperly-web/releases/download/v1.1.0/Whisperly_0.1.0_x64.dmg" 
-                  className="flex-1 text-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition-colors duration-200 border-0" 
+                <CTAButton
+                  text="Intel Mac (6.0 MB)"
+                  href={downloads?.macos?.intel || "#"}
+                  className="flex-1 text-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition-colors duration-200 border-0"
                 />
-                <CTAButton 
-                  text="Apple Silicon (5.8 MB)" 
-                  href="https://github.com/LeonTing1010/whisperly-web/releases/download/v1.1.0/Whisperly_0.1.0_aarch64.dmg" 
-                  className="flex-1 text-center px-6 py-3 bg-gray-600 text-white font-semibold rounded-lg shadow hover:bg-gray-700 transition-colors duration-200 border-0" 
+                <CTAButton
+                  text="Apple Silicon (5.8 MB)"
+                  href={downloads?.macos?.arm || "#"}
+                  className="flex-1 text-center px-6 py-3 bg-gray-600 text-white font-semibold rounded-lg shadow hover:bg-gray-700 transition-colors duration-200 border-0"
                 />
               </div>
             </div>
@@ -71,20 +80,20 @@ export default function DownloadPage() {
                 Linux
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <CTAButton 
-                  text=".deb (6.0 MB)" 
-                  href="https://github.com/LeonTing1010/whisperly-web/releases/download/v1.1.0/Whisperly_0.1.0_amd64.deb" 
-                  className="text-center px-4 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition-colors duration-200 border-0" 
+                <CTAButton
+                  text=".deb (6.0 MB)"
+                  href={downloads?.linux?.deb || "#"}
+                  className="text-center px-4 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition-colors duration-200 border-0"
                 />
-                <CTAButton 
-                  text=".rpm (6.0 MB)" 
-                  href="https://github.com/LeonTing1010/whisperly-web/releases/download/v1.1.0/Whisperly-0.1.0-1.x86_64.rpm" 
-                  className="text-center px-4 py-3 bg-red-600 text-white font-semibold rounded-lg shadow hover:bg-red-700 transition-colors duration-200 border-0" 
+                <CTAButton
+                  text=".rpm (6.0 MB)"
+                  href={downloads?.linux?.rpm || "#"}
+                  className="text-center px-4 py-3 bg-red-600 text-white font-semibold rounded-lg shadow hover:bg-red-700 transition-colors duration-200 border-0"
                 />
-                <CTAButton 
-                  text="AppImage (88.6 MB)" 
-                  href="https://github.com/LeonTing1010/whisperly-web/releases/download/v1.1.0/Whisperly_0.1.0_amd64.AppImage" 
-                  className="text-center px-4 py-3 bg-green-600 text-white font-semibold rounded-lg shadow hover:bg-green-700 transition-colors duration-200 border-0" 
+                <CTAButton
+                  text="AppImage (88.6 MB)"
+                  href={downloads?.linux?.appimage || "#"}
+                  className="text-center px-4 py-3 bg-green-600 text-white font-semibold rounded-lg shadow hover:bg-green-700 transition-colors duration-200 border-0"
                 />
               </div>
             </div>
@@ -94,16 +103,16 @@ export default function DownloadPage() {
               <div>
                 <h2 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">Upgrade to Pro</h2>
                 <p className="mb-4 text-gray-700 dark:text-gray-300">Unlock unlimited transcription, advanced export formats, and priority support.</p>
-                <CTAButton 
-                  text="Buy Pro Version" 
-                  href="/pricing" 
-                  className="sm:w-auto w-fit h-[60xp] text-base px-4 py-1.5 bg-gradient-to-r from-purple-600 via-blue-500 to-blue-400 text-white font-extrabold rounded-md shadow-lg border-0 transition-all duration-200 tracking-wider hover:scale-105 hover:bg-gradient-to-br hover:from-blue-600 hover:via-purple-600 hover:to-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-800 ring-offset-2 ring-offset-white dark:ring-offset-gray-900" 
+                <CTAButton
+                  text="Buy Pro Version"
+                  href="/pricing"
+                  className="sm:w-auto w-fit h-[60xp] text-base px-4 py-1.5 bg-gradient-to-r from-purple-600 via-blue-500 to-blue-400 text-white font-extrabold rounded-md shadow-lg border-0 transition-all duration-200 tracking-wider hover:scale-105 hover:bg-gradient-to-br hover:from-blue-600 hover:via-purple-600 hover:to-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-800 ring-offset-2 ring-offset-white dark:ring-offset-gray-900"
                 />
               </div>
               <div>
                 <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">Version Information</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                  <strong>Current Version:</strong> v1.1.0
+                  <strong>Current Version:</strong> {downloads?.version || 'v1.1.0'}
                 </p>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
                   <strong>System Requirements:</strong>
@@ -124,4 +133,4 @@ export default function DownloadPage() {
       </section>
     </>
   );
-} 
+}
