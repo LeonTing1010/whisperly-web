@@ -123,8 +123,8 @@ export default function DownloadPage() {
                 <h2 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">Upgrade to Pro</h2>
                 <p className="mb-4 text-gray-700 dark:text-gray-300">Unlock unlimited transcription, advanced export formats, and priority support.</p>
                 <CTAButton
-                  text="Buy Pro Version"
-                  href="/pricing"
+                  text="Share Your Feedback"
+                  href="/survey"
                   className="sm:w-auto w-fit h-[60xp] text-base px-4 py-1.5 bg-gradient-to-r from-purple-600 via-blue-500 to-blue-400 text-white font-extrabold rounded-md shadow-lg border-0 transition-all duration-200 tracking-wider hover:scale-105 hover:bg-gradient-to-br hover:from-blue-600 hover:via-purple-600 hover:to-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-800 ring-offset-2 ring-offset-white dark:ring-offset-gray-900"
                 />
               </div>

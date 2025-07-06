@@ -6,10 +6,10 @@ test("has correct title", async ({ page }) => {
   await expect(page).toHaveTitle(/Whisperly/)
 })
 
-test("navigates to pricing page", async ({ page }) => {
+test("navigates to survey page", async ({ page }) => {
   await page.goto("./")
-  await page.click('a[href="/pricing"]')
-  await expect(page).toHaveURL(/.*pricing/)
+  await page.click('a[href="/survey"]')
+  await expect(page).toHaveURL(/.*survey/)
 })
 
 test("navigates to download page", async ({ page }) => {

@@ -13,10 +13,10 @@ export default function NavBar() {
         </Link>
         <div className="space-x-6">
           <Link
-            href="/pricing"
+            href="/survey"
             className="text-lg font-semibold text-gray-700 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors border-b-2 border-transparent hover:border-blue-500 pb-1"
           >
-            Pricing
+            Survey
           </Link>
           <Link
             href="/compare"

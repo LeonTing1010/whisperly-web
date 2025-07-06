@@ -14,7 +14,7 @@ export default function Footer() {
             <ul className="space-y-2" role="list">
               <li><Link href="/" className="hover:underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</Link></li>
               <li><Link href="/download" className="hover:underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Download Whisperly</Link></li>
-              <li><Link href="/pricing" className="hover:underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Pricing Plans</Link></li>
+              <li><Link href="/survey" className="hover:underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors">User Survey</Link></li>
               <li><Link href="/compare" className="hover:underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Compare Transcription Tools</Link></li>
               <li><Link href="/faq" className="hover:underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Frequently Asked Questions</Link></li>
               <li><Link href="/testimonials" className="hover:underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Customer Reviews</Link></li>

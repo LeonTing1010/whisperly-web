@@ -96,8 +96,8 @@ export default function ComparePage() {
                 ))}
               </ul>
               <div className="text-center mt-auto">
-                <span className="inline-block bg-gradient-to-r from-blue-500 via-purple-500 to-blue-400 text-white px-6 py-2 rounded-xl font-bold text-lg shadow">$39 One-Time</span>
-                <div className="text-xs text-gray-500 mt-2">No subscription, all features included</div>
+                <span className="inline-block bg-gradient-to-r from-blue-500 via-purple-500 to-blue-400 text-white px-6 py-2 rounded-xl font-bold text-lg shadow">Coming Soon</span>
+                <div className="text-xs text-gray-500 mt-2">Professional version in development</div>
               </div>
             </div>
             {/* 竞品卡片 */}
@@ -127,11 +127,11 @@ export default function ComparePage() {
             ))}
           </div>
           <div className="text-center mt-16">
-            <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Why Whisperly is the Best Choice</h2>
+            <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Why Whisperly Will Be the Best Choice</h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-6">
-              Whisperly is the only tool that guarantees your audio never leaves your device, with a one-time payment and no hidden fees. Enjoy peace of mind, professional accuracy, and lifetime updates—no subscriptions, no compromises.
+              Whisperly will be the only tool that guarantees your audio never leaves your device, with a one-time payment and no hidden fees. Help us build the perfect transcription tool for your needs.
             </p>
-            <a href="/download" className="inline-block bg-gradient-to-r from-blue-500 via-purple-500 to-blue-400 text-white px-8 py-4 rounded-xl shadow-lg hover:scale-105 transition-transform font-bold text-lg">Download Free Trial</a>
+            <a href="/survey" className="inline-block bg-gradient-to-r from-blue-500 via-purple-500 to-blue-400 text-white px-8 py-4 rounded-xl shadow-lg hover:scale-105 transition-transform font-bold text-lg">Share Your Feedback</a>
           </div>
         </div>
       </section>

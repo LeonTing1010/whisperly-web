@@ -177,8 +177,8 @@ export default function HomePage() {
                 className="w-full sm:w-auto text-lg px-8 py-4 bg-white text-blue-600 hover:bg-blue-50 shadow-lg" 
               />
               <CTAButton 
-                text="Buy Pro - $39" 
-                href="/pricing" 
+                text="Share Your Feedback" 
+                href="/survey" 
                 className="w-full sm:w-auto text-lg px-8 py-4 bg-yellow-400 text-gray-900 hover:bg-yellow-300 shadow-lg" 
               />
             </div>
